@@ -1,0 +1,7 @@
+numpy
+cv
+scikit-learn
+opencv_python_headless
+ultralytics
+streamlit
+vit-pytorch
