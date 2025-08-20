@@ -21,7 +21,7 @@ transform = transforms.Compose([
 
 @st.cache_resource
 def load_models():
-    yolo_model = YOLO("best.pt")
+    yolo_model = YOLO("D:/yolo8_congTruong/model/best.pt")
     model = ViT(
         image_size=256,
         patch_size=32,
@@ -33,7 +33,7 @@ def load_models():
         dropout=0.1,
         emb_dropout=0.1
     )
-    model.load_state_dict(torch.load("D:/yolo8_congTruong/model/vit_helmet_best.pth", map_location="cpu"))
+    model.load_state_dict(torch.load("D:/yolo8_congTruong/train_model/vit_helmet_best.pth", map_location="cpu"))
     model.eval()
     return yolo_model, model
 
